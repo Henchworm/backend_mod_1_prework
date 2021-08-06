@@ -5,27 +5,38 @@
 
 # Example: Write a method that when called will print your name:
 def print_name
-  p "Severus Snape"
+  p "Chris"
 end
 
 print_name
 
 # Write a method that takes a name as an argument and prints it:
 def print_name(name)
-  # YOUR CODE HERE
+  puts name
 end
 
-print_name("Albus Dumbledore")
+print_name("Chris")
 
-# Write a method that takes in 2 numbers as arguments and prints 
+# Write a method that takes in 2 numbers as arguments and prints
 # their sum. Then call your method three times with different arguments passed in:
-# YOUR CODE HERE
+#def find_sum(num1, num2)
+def find_sum(num1, num2)
+  puts num1 + num2
+end
+find_sum(5, 6)
+find_sum(1, 2)
+find_sum(4,30)
 
-# Write a method that takes in two strings as arguments and prints 
-# a concatenation of those two strings. Example: The arguments could be 
-# (man, woman) and the end result might output: "When Harry Met Sally".  
-# Then call your method three times with different arguments passed in. 
-
+# Write a method that takes in two strings as arguments and prints
+# a concatenation of those two strings. Example: The arguments could be
+# (man, woman) and the end result might output: "When Harry Met Sally".
+# Then call your method three times with different arguments passed in.
+def string_concat(name_1, name_2)
+  puts "I went to the concert with " +name_1 + " and " + name_2 + "."
+end
+string_concat("Bobby","Jimmy")
+string_concat("Lisa", "Larry")
+string_concat("Raed","Michael")
 
 #-------------------
 # PART 3: Naming is Hard
@@ -38,4 +49,6 @@ print_name("Albus Dumbledore")
 # What did you name each parameter, and why?
 
 # EXPLAIN:
-
+I named the method/function "string_concat" becuase the name defines what is happening in the method:
+we are taking strings and combining them.
+I named the parameters name_1 and name_2 so we know to add two seperate names to the function. 
