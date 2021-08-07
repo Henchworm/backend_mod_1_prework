@@ -1,84 +1,99 @@
-# Challenge - See if you can follow the instructions and complete the exercise in under 30 minutes!
+hero_name = "Radioactive Man"
+special_ability = "upending atoms"
+greeting = "Behold! I am #{hero_name}."
+catchphrase = "Up and at them, #{special_ability}!"
+power = 3
+energy = 7
+full_power = power * 500
+full_energy = energy + 150
+is_human = true
+identity_concealed = false
+arch_enemies = ["King Kong", "James Joyce", "Studio Executive"]
+sidekicks = ["Fallout Boy", "Jolly Old St Nick", "Mickey Rooney"]
+arch_enemies.push("Johnny Rocket")
+puts arch_enemies
+sidekicks.shift
+puts sidekicks
 
-# Declare two variables - hero_name AND special_ability - set to strings
+def asses_situation(danger_level, save_the_day = "Praise me, the almightly atomized Radioactive Man!", bad_excuse = "These atoms are too dense!")
 
-# Declare two variables - greeting AND catchphrase
-#   greeting should be assigned to a string that uses interpolation to include the hero_name
-#   catchphrase should be assigned to a string that uses interpolation to include the special_ability
+  puts "The danger level appears to be #{danger_level}!"
+if danger_level >= 50
+  puts bad_excuse
 
-# Declare two variables - power AND energy - set to integers
+elsif danger_level < 50 and danger_level > 10
+  puts save_the_day
 
-# Declare two variables - full_power AND full_energy
-#   full_power should multiply your current power by 500
-#   full_energy should add 150 to your current energy
+elsif danger_level < 10
+  puts "Meh. Hard Pass"
+end
+end
+puts asses_situation(50)
 
-# Declare two variables - is_human and identity_concealed - assigned to booleans
+scary_monster = {
+  "name" => "The Three Mile Islander",
+  "smell" => "floral",
+  "weight" => 150,
+  "cities_destroyed" => ["Cleveland," "San Fran", "Pueblo"],
+  "lucky_numbers" => [7, 77, 777],
+  "address" => {
+  "number" => 19072,
+  "street" => "Jason St",
+  "state" => "CO",
+  "zip" => 80211,
+  }
+}
+class SuperHero
+  attr_accessor :nemesis, :super_power, :age , :nemesis , :energy_level, :power_level, :name
+  def initialize(nemesis, power_level, energy_level)
+    @nemesis = nemesis
+    @energy_level = energy_level
+    @power_level = power_level
+  end
 
+  def say_name
+    puts name
+  end
 
-# Declare two variables - arch_enemies AND sidekicks
-#   arch_enemies should be an array of at least 3 different enemy strings
-#   sidekicks should be an array of at least 3 different sidekick strings
+  def maximize_energy
+    energy_level = 1000
+    puts energy_level
+  end
 
-# Print the first sidekick to your terminal
+  def gain_power(power_gain)
+    puts "POWER GAIN!!!"
+   puts "#{power_gain} + #{power_level} = NEW POWER LEVEL!"
+  end
 
-# Print the last arch_enemy to the terminal
+end
 
-# Write some code to add a new arch_enemy to the arch_enemies array
-
-# Print the arch_enemies array to terminal to ensure you added a new arch_enemey
-
-# Remove the first sidekick from the sidekicks array
-
-# Print the sidekicks array to terminal to ensure you added a new sidekick
-
-# Create a function called assess_situation that takes three arguments - danger_level, save_the_day, bad_excuse
-#   - danger_level should be an integer
-#   - save_the_day should be a string a hero would say once they save the day 
-#   - bad_excuse should be a string a hero would say if they are too afraid of the danger_level
-
-# Your function should include an if/else statement that meets the following criteria
-#   - Danger levels that are above 50 are too scary for your hero. Any danger level that is above 50 should result in printing the bad_excuse to the terminal
-#   - Anything danger_level that is between 10 and 50 should result in printing the save_the_day string to the terminal
-#   - If the danger_level is below 10, it means it is not worth your time and should result in printing the string "Meh. Hard pass." to the terminal.
-
-#Test Cases
-announcement = 'Never fear, the Courageous Curly Bracket is here!'
-excuse = 'I think I forgot to lock up my 1992 Toyota Coralla. Be right back.'
-# assess_situation(99, announcement, excuse) > Should print - 'I think I forgot to lock up my 1992 Toyota Coralla. Be right back.'
-#assess_situation(21, announcement, excuse) > should print - 'Never fear, the Courageous Curly Bracket is here!'
-#assess_situation(3, announcement, excuse) > should print - "Meh. Hard pass."
-
-# Declare a new variable - scary_monster - assigned to an hash with the following key/values
-#   - name (string)
-#   - smell (string)
-#   - weight (integer)
-#   - citiesDestroyed (array)
-#   - luckyNumbers (array)
-#   - address (hash with following key/values: number , street , state, zip)
-
-
-# Create a new class called SuperHero
-# - Your class should have the following DYNAMIC values
-#   - name 
-#   - super_power
-#   - age 
-# - Your class should have the following STATIC values
-#   - arch_nemesis, assigned to "The Syntax Error"
-#   - power_level = 100
-#   - energy_level = 50 
-
-# - Create the following class methods
-#   - say_name, should print the hero's name to the terminal
-#   - maximize_energy, should update the energy_level to 1000
-#   - gain_power, should take an argument of a number and INCREASE the power_level by that number
-
-# - Create 2 instances of your SuperHero class
+Radioactiveman = SuperHero.new("The Syntax Error", "100", "50")
+Radioactiveman.name = "Radioactive Man"
+Radioactiveman.super_power = "Radiation"
+Radioactiveman.age = 35
+p Radioactiveman.nemesis
+p Radioactiveman.energy_level
+p Radioactiveman.power_level
+p Radioactiveman.name
+p Radioactiveman.age
+p Radioactiveman.super_power
+Radioactiveman.say_name
+Radioactiveman.maximize_energy
+Radioactiveman.gain_power(500)
 
 
-# Reflection
+#REFLECTION:
 # What parts were most difficult about this exerise?
-
+#I definitely had some trouble with the classes:
+#it took some review and youtube videos to get it right.
+#Also, my biggest challenge was successfull debugging.
+#I spent about an hour researching nested hashes--which I understand well--until I realized i forgot a ">" in a hash rocket.
+# I definitely learned my lesson about reading over code slowly and not rushing into something and assuming I don't understand it.
 # What parts felt most comfortable to you?
-
+#After the extensive research I did to get the class section right, I'm feeling pretty
+#confident about all of the concepts when I have access to resources.
 # What skills do you need to continue to practice before starting Mod 1?
+#I definitely need to work on my debugging skills: going slow, and not getting into an "aniexty loop"
+#when I can't figure it out. I'm going to drill excercises similar to the
+# Mod0 Hero to get everything into my muscle memory, and will contiue exploring these concepts.
 
